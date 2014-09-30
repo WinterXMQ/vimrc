@@ -1,7 +1,7 @@
-" -----------------   Author: Ruchee
-" -----------------    Email: my@ruchee.com
-" -----------------     Date: 2014-09-29 16:41
-" -----------------    https://github.com/ruchee/vimrc
+" -----------------   Author: WinterXMQ
+" -----------------    Email: WinterXMQ@gmail.com
+" -----------------     Date: 2014-09-30 22:06
+" -----------------    https://github.com/WinterXMQ/vimrc
 
 
 
@@ -14,13 +14,6 @@ endif
 
 " 针对不同的使用环境进行具体配置
 if g:atCompany
-    " set tags+=D:/Ruchee/Files/code/m.5399.com/tags
-    " set tags+=D:/Ruchee/Files/code/hd.cms.m.5399.com/tags
-    " set tags+=D:/Ruchee/Files/code/hd.m.5399.com/tags
-    " set tags+=D:/Ruchee/Files/code/sdk.m.5399.com/tags
-    " set tags+=D:/Ruchee/Files/code/pay.m.5399.com/tags
-    " set tags+=D:/Ruchee/Files/code/passport.m.5399.com/tags
-
     " set tags+=D:/Ruchee/Files/code/self/laravel/tags
 else
     " set tags+=D:/Ruchee/Files/code/laravel/tags
@@ -228,7 +221,7 @@ au BufRead,BufNewFile *.h        setlocal ft=c
 au BufRead,BufNewFile *.di       setlocal ft=d
 au BufRead,BufNewFile *.cl       setlocal ft=lisp
 au BufRead,BufNewFile *.phpt     setlocal ft=php
-au BufRead,BufNewFile *.inc      setlocal ft=php
+au BufRead,BufNewFile *.php.inc  setlocal ft=php
 au BufRead,BufNewFile *.sql      setlocal ft=mysql
 au BufRead,BufNewFile *.tpl      setlocal ft=smarty
 au BufRead,BufNewFile *.txt      setlocal ft=txt
@@ -533,9 +526,10 @@ let g:snipMate.scope_aliases['xhtml']      = 'html'
 let NERDSpaceDelims = 1                        " 自动添加前置空格
 
 " AuthorInfoDetect    自动添加作者、时间等信息，本质是NERD_commenter && authorinfo的结合
-let g:vimrc_author   = 'Ruchee'                " 昵称
-let g:vimrc_email    = 'my@ruchee.com'         " 邮箱
-let g:vimrc_homepage = 'http://www.ruchee.com' " 个人主页
+let g:vimrc_author   = 'WinterXMQ'             " 昵称
+let g:vimrc_email    = 'WinterXMQ@gmail.com'   " 邮箱
+let g:vimrc_homepage = 'http://winterxmq.github.io'
+                                               " 个人主页
 
 " Indent_guides       显示对齐线
 let g:indent_guides_enable_on_vim_startup = 0  " 默认关闭
@@ -645,15 +639,15 @@ vmap <leader>rm <ESC>:%s/<c-v><c-m>//g<CR>
 " \rt                 一键替换全部Tab为空格
 func! RemoveTabs()
     if &shiftwidth == 2
-        exec "%s/	/  /g"
+        exec "%s/    /  /g"
     elseif &shiftwidth == 4
-        exec "%s/	/    /g"
+        exec "%s/    /    /g"
     elseif &shiftwidth == 6
-        exec "%s/	/      /g"
+        exec "%s/    /      /g"
     elseif &shiftwidth == 8
-        exec "%s/	/        /g"
+        exec "%s/    /        /g"
     else
-        exec "%s/	/ /g"
+        exec "%s/    / /g"
     end
 endfunc
 
